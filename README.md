@@ -2,5 +2,5 @@
 Windows HTTP Server
 
 1. sh install.sh # Null
-2. sh windows.sh
+2. sh linux.sh
 3. sh tidyup.sh
