@@ -1,8 +1,21 @@
 # LIN-HTTP-SERVER
-Windows HTTP Server
+![Screenshot](picture0.png)
 
-NOT COMPLETE YET
+A custom shell-script file that downloads varies exploitation files and manages a simple Linux HTTP Server.
 
-1. sh install.sh # Null
-2. sh linux.sh
-3. sh tidyup.sh
+TESTED: Kali Linux 2019 <br>
+USAGE : sh linux.sh
+
+| SCRIPT | FILENAME    | INFORMATION                   | MD5 Hash                         | Version |
+|------  |------       | -------                       | ----                             | ----   |
+| sh     | install.sh  | Installs all necessary files. | 96a81b071c38791d8107b7bf8ac38fba | abc123 |
+| sh     | linux.sh    | Manages HTTP server profiles. | 9807dd7a460f4d165886e02f861a7009 | abc123 |
+| sh     | tidyup.sh   | Tidy's up redundent files.    | 9587d6056a116ede354b3d18ff269f96 | abc123 | 
+
+
+## COMPUTER MISUSE ACT 1990 - SECTION 3A
+This software program has been specifically written for the purpose of legitimate penetration testing and should not be used for any other unauthorised or nefarious reasons.
+
+
+### CONSOLE DISPLAY
+![Screenshot](picture1.png)

