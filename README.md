@@ -8,8 +8,8 @@ USAGE : sh linux.sh
 
 | SCRIPT | FILENAME    | INFORMATION                   | MD5 Hash                         | Version |
 |------  |------       | -------                       | ----                             | ----   |
-| sh     | install.sh  | Installs all necessary files. | 96a81b071c38791d8107b7bf8ac38fba | abc123 |
-| sh     | linux.sh    | Manages HTTP server profiles. | 656e75810eabe93b0af0d594e8cf243d | abc123 |
+| sh     | install.sh  | Installs all necessary files. | 9d896eed10ff665c662c9b2c3e9410ee | abc123 |
+| sh     | linux.sh    | Manages HTTP server profiles. | d58b6faab0327ec27d5d0e422e53531a | abc123 |
 | sh     | tidyup.sh   | Tidy's up redundent files.    | ffee0a123fca1102942fef293ec6c849 | abc123 | 
 
 
