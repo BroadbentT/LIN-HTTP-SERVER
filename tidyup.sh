@@ -16,5 +16,3 @@
 
 rm file.txt
 rm output.txt
-rm linpayload.elf
-

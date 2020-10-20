@@ -8,9 +8,9 @@ USAGE : sh linux.sh
 
 | SCRIPT | FILENAME    | INFORMATION                   | MD5 Hash                         | Version |
 |------  |------       | -------                       | ----                             | ----   |
-| sh     | install.sh  | Installs all necessary files. | 9d896eed10ff665c662c9b2c3e9410ee | abc123 |
-| sh     | linux.sh    | Manages HTTP server profiles. | d58b6faab0327ec27d5d0e422e53531a | abc123 |
-| sh     | tidyup.sh   | Tidy's up redundent files.    | ffee0a123fca1102942fef293ec6c849 | abc123 | 
+| sh     | install.sh  | Installs all necessary files. | cfbc605710a8599a699107451624903a | abc123 |
+| sh     | linux.sh    | Manages HTTP server profiles. | 2a43da9d2cf49dad370833f2791a49ad | abc123 |
+| sh     | tidyup.sh   | Tidy's up redundent files.    | d7ea322a0fc43fc7c39bfbfb40667cc8 | abc123 | 
 
 
 ## COMPUTER MISUSE ACT 1990 - SECTION 3A
