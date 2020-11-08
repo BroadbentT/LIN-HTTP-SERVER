@@ -48,7 +48,7 @@ echo "linenumplus.sh\"																		"
 echo "linpe.sh\"\n																		"
 echo "----------------------------------------------------------------------------------------------------------------------------------------------------------"
 
-exec python -m SimpleHTTPServer > output.txt &
-rlwrap nc -lvnp 9001
+exec python3 -m SimpleHTTPServer 80 > output.txt &
+exec rlwrap nc -lvnp 9001
 
 #End
