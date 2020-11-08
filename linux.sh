@@ -36,7 +36,7 @@ echo "\n"
 echo "Startup Instructions:\n"
 while read line
   do
-  echo "wget \"http://$line:8000/ALL/"
+  echo "wget \"http://$line:80/ALL/"
 done < $filename
 
 echo "\nENUMERATION			SHELLS				RUNNING PROCESSES		COMMUNICATIONS			KERNAL EXPLOITS		"
